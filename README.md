@@ -28,15 +28,15 @@ El proyecto permite:
 
 ### Estructura del Proyecto
 
-MLflow_Penguins/
-├── docker-compose.yml         # Orquesta los contenedores: MySQL, MinIO, JupyterLab y API
-├── Dockerfile                 # Dockerfile para JupyterLab
-├── requirements.txt           # Requerimientos para JupyterLab (entrenamiento y experimentación)
-├── mlflow_serv.service        # Archivo de configuración para levantar MLflow como servicio (opcional)
-└── inference_api/             # Servicio de API de inferencia
-    ├── Dockerfile             # Dockerfile para la API de inferencia
-    ├── inference_api.py       # Código FastAPI de la API
-    └── requirements.txt       # Requerimientos para la API (incluye fastapi, uvicorn, mlflow, pandas, boto3)
+    MLflow_Penguins/
+    ├── docker-compose.yml         # Orquesta los contenedores: MySQL, MinIO, JupyterLab y API
+    ├── Dockerfile                 # Dockerfile para JupyterLab
+    ├── requirements.txt           # Requerimientos para JupyterLab (entrenamiento y experimentación)
+    ├── mlflow_serv.service        # Archivo de configuración para levantar MLflow como servicio (opcional)
+    └── inference_api/             # Servicio de API de inferencia
+        ├── Dockerfile             # Dockerfile para la API de inferencia
+        ├── inference_api.py       # Código FastAPI de la API
+        └── requirements.txt       # Requerimientos para la API (incluye fastapi, uvicorn, mlflow, pandas, boto3)
 
 ### Requisitos
 
@@ -131,11 +131,11 @@ La respuesta debería ser, por ejemplo:
 
 ## Notas Adicionales
 
-    **Volúmenes Compartidos:**
-    Asegúrate de que los directorios montados (por ejemplo, en JupyterLab) estén correctamente sincronizados entre el host y el contenedor.
+**Volúmenes Compartidos:**
+Asegúrate de que los directorios montados (por ejemplo, en JupyterLab) estén correctamente sincronizados entre el host y el contenedor.
 
-    **Dependencias:**
-    Si se presentan conflictos de versiones (por ejemplo, FastAPI vs. librerías de entrenamiento), considera aislar los entornos en contenedores separados, como se hizo en este proyecto.
+**Dependencias:**
+Si se presentan conflictos de versiones (por ejemplo, FastAPI vs. librerías de entrenamiento), considera aislar los entornos en contenedores separados, como se hizo en este proyecto.
 
-    **Configuración de MLflow y MinIO:**
-    Revisa que las variables de entorno (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, MLFLOW_S3_ENDPOINT_URL) estén configuradas de forma consistente en todos los componentes.
+**Configuración de MLflow y MinIO:**
+Revisa que las variables de entorno (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, MLFLOW_S3_ENDPOINT_URL) estén configuradas de forma consistente en todos los componentes.
