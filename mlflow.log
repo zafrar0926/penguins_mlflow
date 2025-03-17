@@ -1,0 +1,9 @@
+nohup: ignoring input
+[2025-03-16 18:19:25 -0500] [2950192] [INFO] Starting gunicorn 23.0.0
+[2025-03-16 18:19:25 -0500] [2950192] [INFO] Listening at: http://0.0.0.0:5000 (2950192)
+[2025-03-16 18:19:25 -0500] [2950192] [INFO] Using worker: sync
+[2025-03-16 18:19:25 -0500] [2950318] [INFO] Booting worker with pid: 2950318
+[2025-03-16 18:19:25 -0500] [2950357] [INFO] Booting worker with pid: 2950357
+[2025-03-16 18:19:25 -0500] [2950413] [INFO] Booting worker with pid: 2950413
+[2025-03-16 18:19:25 -0500] [2950418] [INFO] Booting worker with pid: 2950418
+Running the mlflow server failed. Please see the logs above for details.
