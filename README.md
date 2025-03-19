@@ -62,6 +62,18 @@ sudo docker-compose up --build jupyterlab
 
 Accede a JupyterLab en http://<tu-ip>:8888.
 
+**Para levantar MLFLow desde Systemd:**
+
+sudo systemctl enable /home/estudiante/MLflow_Penguins/mlflow_serv.service
+
+Cambia el path con la ruta que utilices en donde se encuentra el archivo .service
+
+sudo systemctl start mlflow_serv
+
+PAra verificar que esta corriendo:
+systemctl status mlflow_serv
+
+
 **MLflow Tracking Server**
 
 Asegúrate de que MLflow esté configurado para usar MinIO como artifact store (por ejemplo, con --default-artifact-root s3://mlflows3/artifacts) y que la tracking URI en los notebooks esté configurada a http://<tu-ip>:5000.
